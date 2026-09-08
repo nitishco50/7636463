@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: instasave-backend
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11"
+      - key: PORT
+        value: "8000"
+      # Set these in Render Dashboard:
+      # - BACKEND_ADMIN_TOKEN (generate a secure random string)
+      # - CORS_ORIGINS (your Hostinger domain, e.g. https://yourdomain.com)
